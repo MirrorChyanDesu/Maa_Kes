@@ -1,11 +1,10 @@
 {
     "interface_version": 2,
     "name": "Maa_Kes",
-    "description": "这是一个使用 MaaFramework 创建的新项目。",
+    "description": "PC端请管理员方式启动",
     // "contact": "QQ群: 123456789",
     "license": "MIT",
     "welcome": "首次使用！欢迎使用 MAA!",
-    // 填写项目地址和版本号可实现自动更新功能
     "github": "https://github.com/miaojiuqing/Maa_KES",
     "version": "1.0.0",
     "controller": [
