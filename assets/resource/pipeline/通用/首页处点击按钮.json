@@ -1,0 +1,20 @@
+{
+    "首页点击-方舟城市": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1174,
+                    342,
+                    83,
+                    92
+                ],
+                "green_mask": true,
+                "template": [
+                    "通用/首页处按钮/方舟城市.png"
+                ]
+            }
+        },
+        "action": "Click"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "已进入首页": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    231,
+                    100,
+                    75
+                ],
+                "template": [
+                    "进入游戏/已处于首页.png"
+                ]
+            }
+        }
+    }
+}

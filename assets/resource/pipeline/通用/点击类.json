@@ -15,5 +15,22 @@
             }
         },
         "action": "Click"
+    },
+    "通用-点击返回": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    118,
+                    87
+                ],
+                "template": [
+                    "通用/交互按钮/返回.png"
+                ]
+            }
+        },
+        "action": "Click"
     }
 }

@@ -50,6 +50,10 @@
     "task": [],
     "group": [
         {
+            "name": "日常",
+            "label": "日常"
+        },
+        {
             "name": "工具",
             "label": "单独运行工具"
         }
@@ -58,7 +62,9 @@
         //单独运行工具
         "tasks/工具/剧情跳过.json",
         "tasks/工具/自动推图.json",
-        "tasks/工具/教学红点清除.json"
+        "tasks/工具/教学红点清除.json",
+        //日常
+        "tasks/日常/喝咖啡.json"
     ],
     "option": {}
 }

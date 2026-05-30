@@ -1,0 +1,271 @@
+{
+    "日常-喝咖啡-任务开始层": {},
+    "日常-喝咖啡-总任务层": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    231,
+                    100,
+                    75
+                ],
+                "template": [
+                    "进入游戏/已处于首页.png"
+                ]
+            }
+        },
+        "next": [
+            "日常-喝咖啡-已进入方舟城市",
+            "[JumpBack]首页点击-方舟城市"
+        ]
+    },
+    "日常-喝咖啡-已进入方舟城市": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    486,
+                    359,
+                    299,
+                    114
+                ],
+                "template": [
+                    "日常/喝咖啡/已进入方舟城市.png"
+                ]
+            }
+        },
+        "next": [
+            "日常-喝咖啡-已进入咖啡店",
+            "[JumpBack]日常-喝咖啡-点击进入咖啡店"
+        ]
+    },
+    "日常-喝咖啡-点击进入咖啡店": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    523,
+                    590,
+                    89,
+                    80
+                ],
+                "template": [
+                    "日常/喝咖啡/点击进咖啡店.png"
+                ]
+            }
+        },
+        "action": "Click"
+    },
+    "日常-喝咖啡-已进入咖啡店": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    774,
+                    6,
+                    137,
+                    146
+                ],
+                "template": [
+                    "日常/喝咖啡/已进入咖啡店.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    959,
+                    634,
+                    281,
+                    48
+                ]
+            }
+        },
+        "next": [
+            "日常-喝咖啡-咖啡喝过了",
+            "日常-喝咖啡-已进入菜单板",
+            "日常-喝咖啡-已进入咖啡店"
+        ]
+    },
+    "日常-喝咖啡-已进入菜单板": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    685,
+                    221,
+                    236,
+                    156
+                ],
+                "template": [
+                    "日常/喝咖啡/菜单板.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    715,
+                    183,
+                    178,
+                    362
+                ]
+            }
+        },
+        "next": [
+            "日常-喝咖啡-可进行点单",
+            "日常-喝咖啡-不可进行点单"
+        ]
+    },
+    "日常-喝咖啡-可进行点单": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    793,
+                    588,
+                    310,
+                    91
+                ],
+                "upper": [
+                    241,
+                    132,
+                    45
+                ],
+                "lower": [
+                    239,
+                    120,
+                    41
+                ],
+                "count": 8000
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "日常-喝咖啡-可进行点单",
+            "日常-喝咖啡-正在制作美味咖啡"
+        ]
+    },
+    "日常-喝咖啡-不可进行点单": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    793,
+                    588,
+                    310,
+                    91
+                ],
+                "upper": [
+                    155,
+                    155,
+                    155
+                ],
+                "lower": [
+                    147,
+                    147,
+                    147
+                ],
+                "count": 8000
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    715,
+                    183,
+                    178,
+                    362
+                ]
+            }
+        },
+        "next": [
+            "日常-喝咖啡-已进入菜单板"
+        ]
+    },
+    "日常-喝咖啡-正在制作美味咖啡": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1196,
+                    0,
+                    84,
+                    84
+                ],
+                "template": [
+                    "日常/喝咖啡/喝咖啡动画跳过.png"
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 500,
+        "next": [
+            "日常-喝咖啡-正在制作美味咖啡",
+            "日常-喝咖啡-咖啡喝完精神饱满",
+            "日常-喝咖啡-咖啡喝过了"
+        ]
+    },
+    "日常-喝咖啡-咖啡喝完精神饱满": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    591,
+                    324,
+                    100,
+                    93
+                ],
+                "template": [
+                    "日常/喝咖啡/喝完了.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    64,
+                    523,
+                    814,
+                    162
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "日常-喝咖啡-咖啡喝完精神饱满",
+            "日常-喝咖啡-咖啡喝过了"
+        ]
+    },
+    "日常-喝咖啡-咖啡喝过了": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1195,
+                    591,
+                    73,
+                    71
+                ],
+                "template": [
+                    "日常/喝咖啡/喝过了.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "☕️喝完啦~"
+        },
+        "next": [
+            "已进入首页",
+            "[JumpBack]通用-点击返回",
+            "[JumpBack]黑屏计数"
+        ]
+    }
+}
