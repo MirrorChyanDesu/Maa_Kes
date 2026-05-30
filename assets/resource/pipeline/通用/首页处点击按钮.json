@@ -16,5 +16,23 @@
             }
         },
         "action": "Click"
+    },
+    "首页点击-模拟": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1170,
+                    214,
+                    92,
+                    93
+                ],
+                "green_mask": true,
+                "template": [
+                    "通用/首页处按钮/模拟.png"
+                ]
+            }
+        },
+        "action": "Click"
     }
 }

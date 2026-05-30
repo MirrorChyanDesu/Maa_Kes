@@ -15,5 +15,21 @@
         "connected": true,
         "count": 80000,
         "post_delay": 1000
+    },
+    "卡厄斯logo加载": {
+        "recognition": "ColorMatch",
+        "upper": [
+            255,
+            255,
+            255
+        ],
+        "lower": [
+            255,
+            255,
+            255
+        ],
+        "connected": true,
+        "count": 60000,
+        "post_delay": 1000
     }
 }
