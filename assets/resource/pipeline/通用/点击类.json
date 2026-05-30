@@ -1,0 +1,19 @@
+{
+    "通用-点击屏幕": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    601,
+                    606,
+                    79,
+                    78
+                ],
+                "template": [
+                    "通用/交互按钮/点击屏幕.png"
+                ]
+            }
+        },
+        "action": "Click"
+    }
+}

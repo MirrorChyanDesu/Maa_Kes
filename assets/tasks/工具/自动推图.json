@@ -1,0 +1,46 @@
+{
+    "task": [
+        {
+            "name": "自动推图",
+            "default_check": true,
+            "group": [
+                "工具"
+            ],
+            "entry": "工具-自动推图-任务开始层",
+            "option": [
+                "工具-自动推图-自行确认不再显示"
+            ]
+        }
+    ],
+    "option": {
+        "工具-自动推图-自行确认不再显示": {
+            "label": "自行显示不再弹出确认",
+            "type": "switch",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "工具-自动推图-跳过确认": {
+                            "enabled": false,
+                            "action": {
+                                "type": "Click",
+                                "param": {
+                                    "target": [
+                                        677,
+                                        436,
+                                        330,
+                                        36
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

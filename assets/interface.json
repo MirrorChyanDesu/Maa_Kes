@@ -57,7 +57,8 @@
     ],
     "import": [
         //单独运行工具
-        "tasks/工具/剧情跳过.json"
+        "tasks/工具/剧情跳过.json",
+        "tasks/工具/自动推图.json"
     ],
     "option": {}
 }

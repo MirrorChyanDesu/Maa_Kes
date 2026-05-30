@@ -1,0 +1,81 @@
+{
+    "工具-自动推图-已进入编队": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    26,
+                    617,
+                    101,
+                    91
+                ],
+                "template": [
+                    "通用/战斗类/已进入编队界面.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    890,
+                    637,
+                    348,
+                    44
+                ]
+            }
+        },
+        "next": [
+            "工具-自动推图-已进入编队",
+            "工具-自动推图-已进入战斗",
+            "[JumpBack]黑屏计数"
+        ]
+    },
+    "工具-自动推图-已进入战斗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1089,
+                    2,
+                    72,
+                    72
+                ],
+                "template": [
+                    "通用/战斗类/自动战斗中.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "战斗⚔️！"
+        },
+        "next": [
+            "工具-自动推图-战斗中"
+        ]
+    },
+    "工具-自动推图-战斗中": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1089,
+                    2,
+                    72,
+                    72
+                ],
+                "template": [
+                    "通用/战斗类/自动战斗中.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "战斗⚔️！"
+        },
+        "next": [
+            "工具-自动推图-关卡已结束-可直接下一关",
+            "工具-自动推图-关卡已结束",
+            "工具-自动推图-战斗中",
+            "[JumpBack]黑屏计数"
+        ]
+    }
+}
