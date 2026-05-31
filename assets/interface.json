@@ -2,9 +2,9 @@
     "interface_version": 2,
     "name": "Maa_Kes",
     "description": "PC端请管理员方式启动",
-    // "contact": "QQ群: 123456789",
+    "contact": "QQ群: 437587416",
     "license": "MIT",
-    "welcome": "首次使用！欢迎使用 MAA!",
+    "welcome": "维若妮卡已就位！",
     "github": "https://github.com/miaojiuqing/Maa_KES",
     "version": "1.0.0",
     "controller": [
