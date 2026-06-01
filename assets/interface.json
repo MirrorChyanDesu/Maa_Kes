@@ -17,7 +17,7 @@
             "name": "桌面端",
             "type": "Win32",
             "win32": {
-                "class_regex": ".*",
+                "class_regex": "GLFW30",
                 "window_regex": "卡厄思梦境",
                 "screencap": "PrintWindow", // 截图方式
                 "mouse": "PostMessageWithCursorPos", // 鼠标控制方式
