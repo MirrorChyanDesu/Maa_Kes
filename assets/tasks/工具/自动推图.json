@@ -2,7 +2,7 @@
     "task": [
         {
             "name": "自动推图",
-            "default_check": true,
+            "default_check": false,
             "group": [
                 "工具"
             ],

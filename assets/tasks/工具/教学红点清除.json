@@ -2,7 +2,7 @@
     "task": [
         {
             "name": "教学处自动清理红点",
-            "default_check": true,
+            "default_check": false,
             "group": [
                 "工具"
             ],
