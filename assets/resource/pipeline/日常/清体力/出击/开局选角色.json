@@ -153,7 +153,9 @@
                 ]
             }
         },
-        "next": []
+        "next": [
+            "出击-选角色-点击选中所需角色"
+        ]
     },
     "出击-选角色-筛选完毕-点击启用筛选": {
         "recognition": {
@@ -181,5 +183,141 @@
                 ]
             }
         }
+    },
+    "出击-选角色-点击选中所需角色": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    127,
+                    67,
+                    1136,
+                    572
+                ],
+                "template": [
+                    "通用/角色列表选取/虚无/凛.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "已找到所选角色"
+        },
+        "action": "Click",
+        "next": [
+            "出击-选角色-验证所选中角色",
+            "[JumpBack]出击-选角色-点击确认配置",
+            "出击-选角色-点击选中所需角色"
+        ]
+    },
+    "出击-选角色-点击确认配置": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    913,
+                    632,
+                    114,
+                    86
+                ],
+                "template": [
+                    "日常/出击/选角色/配置角色确认.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    936,
+                    657,
+                    304,
+                    33
+                ]
+            }
+        },
+        "post_delay": 1500
+    },
+    "出击-选角色-验证所选中角色": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    271,
+                    22,
+                    592,
+                    592
+                ],
+                "template": [
+                    "日常/出击/选角色/角色验证/虚无/凛.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "所选角色选择成功"
+        },
+        "next": [
+            "出击-选中角色-验证体力是否充足-充足",
+            "出击-选中角色-验证体力是否充足-体力不足以挑战"
+        ]
+    },
+    "出击-选中角色-验证体力是否充足-充足": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    866,
+                    610,
+                    398,
+                    103
+                ],
+                "upper": [
+                    184,
+                    58,
+                    183
+                ],
+                "lower": [
+                    153,
+                    38,
+                    123
+                ],
+                "count": 12000
+            }
+        },
+        "action": "Click",
+        "next": [
+            "出击-选中角色-验证体力是否充足-充足"
+        ]
+    },
+    "出击-选中角色-验证体力是否充足-体力不足以挑战": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    866,
+                    610,
+                    398,
+                    103
+                ],
+                "upper": [
+                    142,
+                    142,
+                    142
+                ],
+                "lower": [
+                    83,
+                    83,
+                    83
+                ],
+                "count": 10000
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "当前体力不足以进行挑战"
+        },
+        "next": [
+            "已进入首页",
+            "[JumpBack]通用-点击返回",
+            "[JumpBack]黑屏计数"
+        ]
     }
 }
